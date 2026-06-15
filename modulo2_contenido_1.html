@@ -120,6 +120,11 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#0a1628;min-height:100vh
         padding: 20px 18px !important;
     }
 
+/* Ocultar todos los slides que no están activos */
+.slide:not(.active) {
+    display: none !important;
+}
+
     /* Evita que queden varios slides visibles a la vez */
     .slide:not(.active) {
         display: none !important;
