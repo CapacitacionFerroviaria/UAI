@@ -102,115 +102,64 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#0a1628;min-height:100vh
 /* --- FIX ESTRUCTURAL DEFINITIVO PARA MÓVILES --- */
 @media (max-width: 768px) {
 
-  /* Área de slides en mobile: se adapta al contenido */
-  .slide-area {
-    height: auto !important;
-    min-height: 500px;
-    overflow: visible !important;
-    position: relative !important;
-  }
+    /* El contenedor de slides debe poder crecer */
+    .slide-area {
+        height: auto !important;
+        min-height: 500px;
+        overflow: visible !important;
+        position: relative !important;
+    }
 
-  /* Comportamiento base de cada slide en mobile */
-  .slide {
-    position: relative !important;
-    inset: auto !important;
-    opacity: 1 !important;
-    transform: none !important;
-    pointer-events: auto !important;
-    padding: 20px 18px !important;
-    /* OJO: sin display:flex aquí, para no pisar el ocultado */
-  }
+    /* Cada slide deja de ser absoluto y pasa a fluir normalmente */
+    .slide {
+        position: relative !important;
+        inset: auto !important;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        padding: 20px 18px !important;
+    }
 
-  /* CRÍTICO: ocultar todos los slides que no están activos */
-  .slide:not(.active) {
-    display: none !important;
-  }
+    /* Evita que queden varios slides visibles a la vez */
+    .slide:not(.active) {
+        display: none !important;
+    }
 
-  /* Tipografía y botones en mobile */
-  .cv-title {
-    font-size: 26px;
-  }
+    /* SLIDE 5: COSO */
+    .cgrid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
 
-  .sh2,
-  .sh2w {
-    font-size: 14px;
-  }
+    .cdet {
+        position: relative !important;
+        z-index: 9999 !important;
+        margin-top: 12px !important;
+        display: block !important;
+    }
 
-  .mb p,
-  .ib p,
-  .ib ul li,
-  .otxt {
-    font-size: 12px;
-    line-height: 1.6;
-  }
+    .banner.blue {
+        position: relative !important;
+        z-index: 1 !important;
+        margin-top: 14px !important;
+    }
 
-  .cbtn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
+    /* SLIDE 6: proceso administrativo */
+    .slide[data-s="6"] > div[style*="grid-template-columns:repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
 
-  /* SLIDE 0: portada ocupa toda la pantalla en mobile */
-  .slide.cover[data-s="0"] {
-    min-height: 100vh !important;
-    height: auto !important;
-    display: flex !important;          /* aquí sí flex, solo portada */
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 0 !important;
-  }
+    #procDetail {
+        position: relative !important;
+        z-index: 9999 !important;
+        margin-top: 14px !important;
+        display: block !important;
+    }
 
-  .slide.cover[data-s="0"] .cover-inner {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 28px;
-  }
-
-  .slide.cover[data-s="0"] .cv-title,
-  .slide.cover[data-s="0"] .cv-sub,
-  .slide.cover[data-s="0"] .cv-badge {
-    text-align: center !important;
-  }
-
-  /* SLIDE 5: evitar superposición del detalle con la grilla */
-  .cgrid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-
-  .cdet {
-    position: relative !important;
-    z-index: 9999 !important;
-    margin-top: 12px !important;
-    display: block !important;
-  }
-
-  .banner.blue {
-    position: relative !important;
-    z-index: 1 !important;
-    margin-top: 14px !important;
-  }
-
-  /* SLIDE 6: ajustar grillas y detalle del proceso */
-  .slide[data-s="6"] > div[style*="grid-template-columns:repeat(4"] {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-
-  #procDetail {
-    position: relative !important;
-    z-index: 9999 !important;
-    margin-top: 14px !important;
-    display: block !important;
-  }
-
-  .slide[data-s="6"] > div[style*="border-top:3px"] > div[style*="grid-template-columns:repeat(4"] {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}   
-
-/* SLIDE 1 FIX DEFINITIVO */
-   .slide[data-s="1"] {
+    .slide[data-s="6"] > div[style*="border-top:3px"] > div[style*="grid-template-columns:repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+   /* SLIDE 0 FIX DEFINITIVO */
+   .slide[data-s="0"] {
        position: relative !important;
        inset: auto !important;
        min-height: 100vh !important;
@@ -224,9 +173,9 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#0a1628;min-height:100vh
        pointer-events: auto !important;
    }
 
-   .slide[data-s="1"] .cv-title,
-   .slide[data-s="1"] .cv-sub,
-   .slide[data-s="1"] .cv-badge {
+   .slide[data-s="0"] .cv-title,
+   .slide[data-s="0"] .cv-sub,
+   .slide[data-s="0"] .cv-badge {
        text-align: center !important;
    }
 }
