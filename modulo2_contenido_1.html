@@ -201,6 +201,35 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#0a1628;min-height:100vh
     grid-template-columns:repeat(2,1fr) !important;
   }
 }
+/* --- FIX DEFINITIVO PORTADA (SLIDE 0) --- */
+
+/* El slide 0 ocupa toda la pantalla en móvil y desktop */
+.slide.cover[data-s="0"] {
+    min-height: 100vh !important;
+    height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+}
+
+/* Contenedor interno centrado */
+.slide.cover[data-s="0"] .cover-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 28px;
+}
+
+/* Centrado del texto */
+.slide.cover[data-s="0"] .cv-title,
+.slide.cover[data-s="0"] .cv-sub,
+.slide.cover[data-s="0"] .cv-badge {
+    text-align: center !important;
+}
+
 </style>
 </head>
 <body>
@@ -213,11 +242,11 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#0a1628;min-height:100vh
 
   <div class="slide-area" id="sa">
 
-    <!-- SLIDE 1: Portada -->
-    <div class="slide cover active" data-s="1">
-      <div class="deco"></div><div class="deco2"></div>
-      <div class="cv-badge">MÓDULO 2</div>
-      <div class="cv-title">El <span>Control Interno</span><br>Gubernamental</div>
+    <!-- SLIDE 0: Portada -->
+<div class="slide cover active" data-s="0">
+    <div class="cover-inner">
+        <div class="cv-badge">Módulo 2</div>
+        <div class="cv-title">El <span>Control Interno</span> en la APN</div>
       <div class="cv-sub">Ley 24156 · Componentes COSO · Sistema de control</div>
     </div>
 
