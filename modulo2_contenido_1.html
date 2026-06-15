@@ -158,21 +158,26 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#0a1628;min-height:100vh
     .slide[data-s="6"] > div[style*="border-top:3px"] > div[style*="grid-template-columns:repeat(4"] {
         grid-template-columns: repeat(2, 1fr) !important;
     }
-/* SLIDE 0 (portada): restaurar pantalla completa en móvil */
-.slide[data-s="0"] {
-    min-height: 100vh !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 40px 28px !important;
-}
+   /* SLIDE 0 FIX DEFINITIVO */
+   .slide[data-s="0"] {
+       position: relative !important;
+       inset: auto !important;
+       min-height: 100vh !important;
+       height: auto !important;
+       display: flex !important;
+       justify-content: center !important;
+       align-items: center !important;
+       padding: 40px 28px !important;
+       opacity: 1 !important;
+       transform: none !important;
+       pointer-events: auto !important;
+   }
 
-/* Centrado del contenido */
-.slide[data-s="0"] .cv-title,
-.slide[data-s="0"] .cv-sub,
-.slide[data-s="0"] .cv-badge {
-    text-align: center !important;
-  }
+   .slide[data-s="0"] .cv-title,
+   .slide[data-s="0"] .cv-sub,
+   .slide[data-s="0"] .cv-badge {
+       text-align: center !important;
+   }
 }
 </style>
 </head>
