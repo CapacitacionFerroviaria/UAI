@@ -130,77 +130,102 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#0a1628;min-height:100vh
 /* --- MOBILE-FIRST (AL FINAL DEL CSS) --- */
 @media (max-width: 768px) {
 
-  /* Estructura base */
-  .slide-area{
-    height:auto !important;
-    min-height:500px;
-    overflow:visible !important;
-    position:relative !important;
+  /* Estructura general en móvil */
+  .slide-area {
+    height: auto !important;
+    min-height: 500px;
+    overflow: visible !important;
+    position: relative !important;
   }
 
-  .slide{
-    position:relative !important;
-    inset:auto !important;
-    opacity:1 !important;
-    transform:none !important;
-    pointer-events:auto !important;
-    padding:20px 18px !important;
+  .slide {
+    position: relative !important;
+    inset: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    padding: 20px 18px !important;
   }
 
-  .slide:not(.active){
-    display:none !important;
+  .slide:not(.active) {
+    display: none !important;
   }
 
-  /* Tipografía */
-  .cv-title{font-size:26px}
-  .sh2,.sh2w{font-size:14px}
-  .mb p,.ib p,.ib ul li,.otxt{font-size:12px;line-height:1.6}
-  .cbtn{padding:10px 20px;font-size:14px}
-
-  /* SLIDE 0 (PORTADA) */
-  .slide[data-s="0"]{
-    min-height:100vh !important;
-    height:auto !important;
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-    padding:40px 28px !important;
+  /* Tipografía y botones en móvil */
+  .cv-title { font-size: 26px; }
+  .sh2, .sh2w { font-size: 14px; }
+  .mb p,
+  .ib p,
+  .ib ul li,
+  .otxt {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .cbtn {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
-  .slide[data-s="0"] .cv-title,
-  .slide[data-s="0"] .cv-sub,
-  .slide[data-s="0"] .cv-badge{
-    text-align:center !important;
+  /* SLIDE 0: portada solo en móvil ocupa toda la pantalla */
+  .slide.cover[data-s="0"] {
+    min-height: 100vh !important;
+    height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+  }
+
+  .slide.cover[data-s="0"] .cover-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 28px;
+  }
+
+  .slide.cover[data-s="0"] .cv-title,
+  .slide.cover[data-s="0"] .cv-sub,
+  .slide.cover[data-s="0"] .cv-badge {
+    text-align: center !important;
   }
 
   /* SLIDE 5 */
-  .cgrid{grid-template-columns:repeat(2,1fr) !important}
-  .cdet{
-    position:relative !important;
-    z-index:9999 !important;
-    margin-top:12px !important;
-    display:block !important;
+  .cgrid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
-  .banner.blue{
-    position:relative !important;
-    z-index:1 !important;
-    margin-top:14px !important;
+
+  .cdet {
+    position: relative !important;
+    z-index: 9999 !important;
+    margin-top: 12px !important;
+    display: block !important;
+  }
+
+  .banner.blue {
+    position: relative !important;
+    z-index: 1 !important;
+    margin-top: 14px !important;
   }
 
   /* SLIDE 6 */
-  .slide[data-s="6"] > div[style*="grid-template-columns:repeat(4"]{
-    grid-template-columns:repeat(2,1fr) !important;
+  .slide[data-s="6"] > div[style*="grid-template-columns:repeat(4"] {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
-  #procDetail{
-    position:relative !important;
-    z-index:9999 !important;
-    margin-top:14px !important;
-    display:block !important;
+
+  #procDetail {
+    position: relative !important;
+    z-index: 9999 !important;
+    margin-top: 14px !important;
+    display: block !important;
   }
-  .slide[data-s="6"] > div[style*="border-top:3px"] > div[style*="grid-template-columns:repeat(4"]{
-    grid-template-columns:repeat(2,1fr) !important;
+
+  .slide[data-s="6"] > div[style*="border-top:3px"] > div[style*="grid-template-columns:repeat(4"] {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
+
 /* --- FIX DEFINITIVO PORTADA (SLIDE 0) --- */
 
 /* El slide 0 ocupa toda la pantalla en móvil y desktop */
