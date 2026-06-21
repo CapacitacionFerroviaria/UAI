@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+<style>
+/* FIX MOBILE PARA SLIDE 3 (cajas desplegadas completas) */
+@media (max-width: 768px) {
+
+  /* El contenedor de los slides debe poder crecer */
+  .slide-area {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Cada slide debe dejar ver todo su contenido interno */
+  .slide {
+    overflow: visible !important;
+  }
+}
+</style>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
