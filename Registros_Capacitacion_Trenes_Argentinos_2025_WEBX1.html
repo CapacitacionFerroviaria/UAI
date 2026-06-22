@@ -6,78 +6,84 @@
 <title>Registros Capacitación Trenes Argentinos 2025</title>
 <style>
 
-/* Force wrapping in column 4 (Denominación) */
-th:nth-child(4), td:nth-child(4) {
-    white-space: normal !important;
-    word-break: break-word;
-    overflow-wrap: anywhere;
-    max-width: 978px;
-}
-
-/* Keep table fixed layout for consistency */
-table {
-    table-layout: fixed;
-}
-
-
-table {
-    table-layout: fixed;
-    width: 100%;
-}
-
-th:nth-child(1), td:nth-child(1) { width: 211px; }
-th:nth-child(2), td:nth-child(2) { width: 84px; }
-th:nth-child(3), td:nth-child(3) { width: 76px; }
-th:nth-child(4), td:nth-child(4) { width: 978px; }
-th:nth-child(5), td:nth-child(5) { width: 463px; }
-
-/* 6th column not specified -> flexible */
-th:nth-child(6), td:nth-child(6) { width: auto; }
-
 * { box-sizing: border-box; }
-body {
+
+html, body {
     margin: 0;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     background: white;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
+
 h1 {
-    font-size: 20px;
-    margin: 0 0 15px 0;
+    font-size: 18px;
+    margin: 0 0 6px 0;
 }
+
+h2.subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+    color: #333;
+}
+
 .table-container {
     width: 100%;
-    overflow-x: auto;
+    max-width: 100%;
+    overflow-x: hidden;
 }
+
 table {
     border-collapse: collapse;
-    width: max-content;
-    min-width: 100%;
-    font-size: 13px;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 12px;
 }
+
 th, td {
     border: 1px solid #888;
-    padding: 6px 8px;
-    white-space: nowrap;
+    padding: 5px 6px;
     text-align: left;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    vertical-align: top;
 }
+
 th {
     position: sticky;
     top: 0;
     background: #f2f2f2;
     font-weight: bold;
 }
+
 tr:nth-child(even) {
     background: #fafafa;
 }
+
+/* Column widths: col 1 sized to fit its own header text exactly (no wrap),
+   the remaining columns share the rest of the available width so the
+   table never needs horizontal scrolling. */
+th:nth-child(1), td:nth-child(1) { width: 252px; white-space: nowrap; }  /* LÍNEA DE DESEMPEÑO DEL PERSONAL: ancho justo al texto */
+th:nth-child(2), td:nth-child(2) { width: 6%; }   /* AÑO */
+th:nth-child(3), td:nth-child(3) { width: 7%; }   /* MES */
+th:nth-child(4), td:nth-child(4) { width: 47%; }  /* DENOMINACIÓN DE LA ACTIVIDAD IMPLEMENTADA */
+th:nth-child(5), td:nth-child(5) { width: 18%; }  /* ÁREA DESTINATARIA DE LA ACTIVIDAD */
+th:nth-child(6), td:nth-child(6) { width: 10%; }  /* TOTAL DE VACANTES DE PERSONAS CAPACITADAS */
+
 </style>
 </head>
 <body>
-<h1>Registros Capacitación Trenes Argentinos 2025</h1>
+<h1>REGISTRO DE ACTIVIDADES DE CAPACITACIÓN - TRENES ARGENTINOS OPERACIONES - SOFSA - AÑO 2025</h1>
+<h2 class="subtitle">Registros Capacitación Trenes Argentinos 2025</h2>
 <div class="table-container">
 <table>
-<tr><th>REGISTRO DE ACTIVIDADES DE CAPACITACIÓN - TRENES ARGENTINOS OPERACIONES - SOFSA - AÑO 2025</th><th></th><th></th><th></th><th></th><th></th></tr>
-<tr><td>LÍNEA DE DESEMPEÑO DEL PERSONAL</td><td>AÑO</td><td>MES</td><td>DENOMINACIÓN DE LA ACTIVIDAD IMPLEMENTADA</td><td>ÁREA DESTINATARIA DE LA ACTIVIDAD</td><td>TOTAL DE VACANTES DE PERSONAS CAPACITADAS</td></tr>
+<thead>
+<tr><th>LÍNEA DE DESEMPEÑO DEL PERSONAL</th><th>AÑO</th><th>MES</th><th>DENOMINACIÓN DE LA ACTIVIDAD IMPLEMENTADA</th><th>ÁREA DESTINATARIA DE LA ACTIVIDAD</th><th>TOTAL DE VACANTES DE PERSONAS CAPACITADAS</th></tr>
+</thead>
+<tbody>
 <tr><td>LBS</td><td>2025</td><td>ENERO</td><td>Mesa de Trabajo</td><td>VARIAS ÁREAS</td><td>5</td></tr>
 <tr><td>LBS</td><td>2025</td><td>ENERO</td><td>Mesa de Trabajo</td><td>VARIAS ÁREAS</td><td>4</td></tr>
 <tr><td>LBS</td><td>2025</td><td>ENERO</td><td>Sistema de Mantenimiento (SIMAF 2)</td><td>MATERIAL RODANTE</td><td>16</td></tr>
@@ -9326,6 +9332,7 @@ tr:nth-child(even) {
 <tr><td>Central - CyD - SSOO</td><td>2025</td><td>DICIEMBRE</td><td>Capacitación Teórico-Práctica sobre Evacuación de Formaciones EMU CSR - Línea Sarmiento</td><td>Transporte</td><td>28</td></tr>
 <tr><td>Central UCIT</td><td>2025</td><td>DICIEMBRE</td><td>Capacitación de Integridad UCIT </td><td>Varias</td><td>131</td></tr>
 
+</tbody>
 </table>
 </div>
 </body>
